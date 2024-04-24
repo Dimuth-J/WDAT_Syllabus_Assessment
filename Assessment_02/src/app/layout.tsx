@@ -19,7 +19,7 @@ export default function RootLayout({
       <body>
         <header
           style={{
-            backgroundColor: 'whitesmoke',
+            backgroundColor: 'lightblue',
             padding: '2rem'
           }}>
           <p>Header</p>
@@ -27,7 +27,7 @@ export default function RootLayout({
         {children}
         <footer
         style={{
-          backgroundColor: 'gray',
+          backgroundColor: 'ghostwhite',
           padding: '2rem'
         }}>
           <p>Footer</p>
