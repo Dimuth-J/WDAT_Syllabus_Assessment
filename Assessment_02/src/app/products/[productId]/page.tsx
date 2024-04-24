@@ -1,27 +1,21 @@
-import React from 'react'
-import { Metadata } from 'next'
-import { resolve } from 'path'
+import { title } from "process";
 
-type Props = {
+type Props ={
   params: {
-    productId: string
-  }
-}
-
-export const generateMetadata = async ({ 
-  params, 
-}: Props ): Promise<Metadata> => {
+    productId: string;
+  };
+};
+export const generateMEtaData = async ({ params } : Props) : Metadata => {
   const title = await new Promise(resolve => {
     setTimeout(() => {
-      resolve(`iphone ${params.productId}`)
+      resolve(`Iphone ${params.productId}`)
     }, 100)
   })
-  return {
-    title: `Product ${title}`
+  return{
+    title: `Product ${params.productId}`,
   }
 }
-
-export default function ProductDetails({params}: Props) {
+export default function ProductDetails({ params } : Props) {
   return (
     <div>
        <h1>Details about product {params.productId}</h1>
